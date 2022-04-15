@@ -32,5 +32,27 @@ namespace MyHW.Properties {
                 return ((string)(this["NorthwindConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-EKRVM5K;Initial Catalog=AdventureWorks;Integrated Security=Tr" +
+            "ue;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string AdventureWorksConnectionString {
+            get {
+                return ((string)(this["AdventureWorksConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\DatabasePhoto" +
+            ".mdf;Integrated Security=True")]
+        public string DatabasePhotoConnectionString {
+            get {
+                return ((string)(this["DatabasePhotoConnectionString"]));
+            }
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace MyHomeWork
             this.bindingSource1.DataSource = myDataSet1.Products;
             this.dataGridView1.DataSource = bindingSource1;
             this.bindingNavigator1.BindingSource = this.bindingSource1;
+
                     }
 
         private void button13_Click(object sender, EventArgs e)
@@ -75,5 +76,7 @@ namespace MyHomeWork
         {
             this.label2.Text = $"{this.bindingSource1.Position+ 1}/{this.bindingSource1.Count}";
         }
+
+
     }
 }
