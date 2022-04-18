@@ -22,7 +22,6 @@ namespace MyHW
         {
             this.Validate();
             this.photoTableBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.databasePhotoDataSet);
 
         }
 
@@ -31,7 +30,6 @@ namespace MyHW
             // TODO: 這行程式碼會將資料載入 'northwindDataSet.PhotoNW' 資料表。您可以視需要進行移動或移除。
             this.photoNWTableAdapter.Fill(this.northwindDataSet.PhotoNW);
             // TODO: 這行程式碼會將資料載入 'databasePhotoDataSet.PhotoTable' 資料表。您可以視需要進行移動或移除。
-            this.photoTableTableAdapter.Fill(this.databasePhotoDataSet.PhotoTable);
 
         }
 
@@ -58,7 +56,6 @@ namespace MyHW
         {
             this.Validate();
             this.photoTableBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.databasePhotoDataSet);
         }
     }
     

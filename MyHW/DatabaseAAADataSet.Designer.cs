@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace myAlbumn {
+namespace MyHW {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace myAlbumn {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DatabasePhotoDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DatabaseAAADataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DatabasePhotoDataSet : global::System.Data.DataSet {
+    public partial class DatabaseAAADataSet : global::System.Data.DataSet {
         
-        private PhotoDataTable tablePhoto;
+        private TableAAADataTable tableTableAAA;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DatabasePhotoDataSet() {
+        public DatabaseAAADataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace myAlbumn {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DatabasePhotoDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DatabaseAAADataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace myAlbumn {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Photo"] != null)) {
-                    base.Tables.Add(new PhotoDataTable(ds.Tables["Photo"]));
+                if ((ds.Tables["TableAAA"] != null)) {
+                    base.Tables.Add(new TableAAADataTable(ds.Tables["TableAAA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace myAlbumn {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PhotoDataTable Photo {
+        public TableAAADataTable TableAAA {
             get {
-                return this.tablePhoto;
+                return this.tableTableAAA;
             }
         }
         
@@ -127,7 +127,7 @@ namespace myAlbumn {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DatabasePhotoDataSet cln = ((DatabasePhotoDataSet)(base.Clone()));
+            DatabaseAAADataSet cln = ((DatabaseAAADataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace myAlbumn {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Photo"] != null)) {
-                    base.Tables.Add(new PhotoDataTable(ds.Tables["Photo"]));
+                if ((ds.Tables["TableAAA"] != null)) {
+                    base.Tables.Add(new TableAAADataTable(ds.Tables["TableAAA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace myAlbumn {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePhoto = ((PhotoDataTable)(base.Tables["Photo"]));
+            this.tableTableAAA = ((TableAAADataTable)(base.Tables["TableAAA"]));
             if ((initTable == true)) {
-                if ((this.tablePhoto != null)) {
-                    this.tablePhoto.InitVars();
+                if ((this.tableTableAAA != null)) {
+                    this.tableTableAAA.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace myAlbumn {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DatabasePhotoDataSet";
+            this.DataSetName = "DatabaseAAADataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DatabasePhotoDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DatabaseAAADataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePhoto = new PhotoDataTable();
-            base.Tables.Add(this.tablePhoto);
+            this.tableTableAAA = new TableAAADataTable();
+            base.Tables.Add(this.tableTableAAA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializePhoto() {
+        private bool ShouldSerializeTableAAA() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace myAlbumn {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DatabasePhotoDataSet ds = new DatabasePhotoDataSet();
+            DatabaseAAADataSet ds = new DatabaseAAADataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace myAlbumn {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void PhotoRowChangeEventHandler(object sender, PhotoRowChangeEvent e);
+        public delegate void TableAAARowChangeEventHandler(object sender, TableAAARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PhotoDataTable : global::System.Data.TypedTableBase<PhotoRow> {
+        public partial class TableAAADataTable : global::System.Data.TypedTableBase<TableAAARow> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -287,8 +287,8 @@ namespace myAlbumn {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PhotoDataTable() {
-                this.TableName = "Photo";
+            public TableAAADataTable() {
+                this.TableName = "TableAAA";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace myAlbumn {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PhotoDataTable(global::System.Data.DataTable table) {
+            internal TableAAADataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +313,7 @@ namespace myAlbumn {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected PhotoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TableAAADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -353,54 +353,54 @@ namespace myAlbumn {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PhotoRow this[int index] {
+            public TableAAARow this[int index] {
                 get {
-                    return ((PhotoRow)(this.Rows[index]));
+                    return ((TableAAARow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PhotoRowChangeEventHandler PhotoRowChanging;
+            public event TableAAARowChangeEventHandler TableAAARowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PhotoRowChangeEventHandler PhotoRowChanged;
+            public event TableAAARowChangeEventHandler TableAAARowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PhotoRowChangeEventHandler PhotoRowDeleting;
+            public event TableAAARowChangeEventHandler TableAAARowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PhotoRowChangeEventHandler PhotoRowDeleted;
+            public event TableAAARowChangeEventHandler TableAAARowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddPhotoRow(PhotoRow row) {
+            public void AddTableAAARow(TableAAARow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PhotoRow AddPhotoRow(string City, byte[] Photo) {
-                PhotoRow rowPhotoRow = ((PhotoRow)(this.NewRow()));
+            public TableAAARow AddTableAAARow(string City, byte[] Photo) {
+                TableAAARow rowTableAAARow = ((TableAAARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         City,
                         Photo};
-                rowPhotoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPhotoRow);
-                return rowPhotoRow;
+                rowTableAAARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTableAAARow);
+                return rowTableAAARow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PhotoRow FindById(int Id) {
-                return ((PhotoRow)(this.Rows.Find(new object[] {
+            public TableAAARow FindById(int Id) {
+                return ((TableAAARow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PhotoDataTable cln = ((PhotoDataTable)(base.Clone()));
+                TableAAADataTable cln = ((TableAAADataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,7 +408,7 @@ namespace myAlbumn {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PhotoDataTable();
+                return new TableAAADataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -441,28 +441,28 @@ namespace myAlbumn {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PhotoRow NewPhotoRow() {
-                return ((PhotoRow)(this.NewRow()));
+            public TableAAARow NewTableAAARow() {
+                return ((TableAAARow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PhotoRow(builder);
+                return new TableAAARow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PhotoRow);
+                return typeof(TableAAARow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PhotoRowChanged != null)) {
-                    this.PhotoRowChanged(this, new PhotoRowChangeEvent(((PhotoRow)(e.Row)), e.Action));
+                if ((this.TableAAARowChanged != null)) {
+                    this.TableAAARowChanged(this, new TableAAARowChangeEvent(((TableAAARow)(e.Row)), e.Action));
                 }
             }
             
@@ -470,8 +470,8 @@ namespace myAlbumn {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PhotoRowChanging != null)) {
-                    this.PhotoRowChanging(this, new PhotoRowChangeEvent(((PhotoRow)(e.Row)), e.Action));
+                if ((this.TableAAARowChanging != null)) {
+                    this.TableAAARowChanging(this, new TableAAARowChangeEvent(((TableAAARow)(e.Row)), e.Action));
                 }
             }
             
@@ -479,8 +479,8 @@ namespace myAlbumn {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PhotoRowDeleted != null)) {
-                    this.PhotoRowDeleted(this, new PhotoRowChangeEvent(((PhotoRow)(e.Row)), e.Action));
+                if ((this.TableAAARowDeleted != null)) {
+                    this.TableAAARowDeleted(this, new TableAAARowChangeEvent(((TableAAARow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,14 +488,14 @@ namespace myAlbumn {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PhotoRowDeleting != null)) {
-                    this.PhotoRowDeleting(this, new PhotoRowChangeEvent(((PhotoRow)(e.Row)), e.Action));
+                if ((this.TableAAARowDeleting != null)) {
+                    this.TableAAARowDeleting(this, new TableAAARowChangeEvent(((TableAAARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovePhotoRow(PhotoRow row) {
+            public void RemoveTableAAARow(TableAAARow row) {
                 this.Rows.Remove(row);
             }
             
@@ -504,7 +504,7 @@ namespace myAlbumn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DatabasePhotoDataSet ds = new DatabasePhotoDataSet();
+                DatabaseAAADataSet ds = new DatabaseAAADataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -522,7 +522,7 @@ namespace myAlbumn {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PhotoDataTable";
+                attribute2.FixedValue = "TableAAADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -566,25 +566,25 @@ namespace myAlbumn {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PhotoRow : global::System.Data.DataRow {
+        public partial class TableAAARow : global::System.Data.DataRow {
             
-            private PhotoDataTable tablePhoto;
+            private TableAAADataTable tableTableAAA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PhotoRow(global::System.Data.DataRowBuilder rb) : 
+            internal TableAAARow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePhoto = ((PhotoDataTable)(this.Table));
+                this.tableTableAAA = ((TableAAADataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tablePhoto.IdColumn]));
+                    return ((int)(this[this.tableTableAAA.IdColumn]));
                 }
                 set {
-                    this[this.tablePhoto.IdColumn] = value;
+                    this[this.tableTableAAA.IdColumn] = value;
                 }
             }
             
@@ -593,14 +593,14 @@ namespace myAlbumn {
             public string City {
                 get {
                     try {
-                        return ((string)(this[this.tablePhoto.CityColumn]));
+                        return ((string)(this[this.tableTableAAA.CityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Photo\' 中資料行 \'City\' 的值是 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("資料表 \'TableAAA\' 中資料行 \'City\' 的值是 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tablePhoto.CityColumn] = value;
+                    this[this.tableTableAAA.CityColumn] = value;
                 }
             }
             
@@ -609,39 +609,39 @@ namespace myAlbumn {
             public byte[] Photo {
                 get {
                     try {
-                        return ((byte[])(this[this.tablePhoto.PhotoColumn]));
+                        return ((byte[])(this[this.tableTableAAA.PhotoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Photo\' 中資料行 \'Photo\' 的值是 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("資料表 \'TableAAA\' 中資料行 \'Photo\' 的值是 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tablePhoto.PhotoColumn] = value;
+                    this[this.tableTableAAA.PhotoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCityNull() {
-                return this.IsNull(this.tablePhoto.CityColumn);
+                return this.IsNull(this.tableTableAAA.CityColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCityNull() {
-                this[this.tablePhoto.CityColumn] = global::System.Convert.DBNull;
+                this[this.tableTableAAA.CityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPhotoNull() {
-                return this.IsNull(this.tablePhoto.PhotoColumn);
+                return this.IsNull(this.tableTableAAA.PhotoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPhotoNull() {
-                this[this.tablePhoto.PhotoColumn] = global::System.Convert.DBNull;
+                this[this.tableTableAAA.PhotoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -649,22 +649,22 @@ namespace myAlbumn {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class PhotoRowChangeEvent : global::System.EventArgs {
+        public class TableAAARowChangeEvent : global::System.EventArgs {
             
-            private PhotoRow eventRow;
+            private TableAAARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PhotoRowChangeEvent(PhotoRow row, global::System.Data.DataRowAction action) {
+            public TableAAARowChangeEvent(TableAAARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PhotoRow Row {
+            public TableAAARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -680,7 +680,7 @@ namespace myAlbumn {
         }
     }
 }
-namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
+namespace MyHW.DatabaseAAADataSetTableAdapters {
     
     
     /// <summary>
@@ -692,7 +692,7 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PhotoTableAdapter : global::System.ComponentModel.Component {
+    public partial class TableAAATableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -706,7 +706,7 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public PhotoTableAdapter() {
+        public TableAAATableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -803,31 +803,31 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Photo";
+            tableMapping.DataSetTable = "TableAAA";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("City", "City");
             tableMapping.ColumnMappings.Add("Photo", "Photo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Photo] WHERE (([Id] = @Original_Id) AND ((@IsNull_City = 1 AND" +
-                " [City] IS NULL) OR ([City] = @Original_City)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TableAAA] WHERE (([Id] = @Original_Id) AND ((@IsNull_City = 1 " +
+                "AND [City] IS NULL) OR ([City] = @Original_City)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_City", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Photo] ([City], [Photo]) VALUES (@City, @Photo);\r\nSELECT Id, C" +
-                "ity, Photo FROM Photo WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TableAAA] ([City], [Photo]) VALUES (@City, @Photo);\r\nSELECT Id" +
+                ", City, Photo FROM TableAAA WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Photo] SET [City] = @City, [Photo] = @Photo WHERE (([Id] = @Origina" +
-                "l_Id) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)));" +
-                "\r\nSELECT Id, City, Photo FROM Photo WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TableAAA] SET [City] = @City, [Photo] = @Photo WHERE (([Id] = @Orig" +
+                "inal_Id) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)" +
+                "));\r\nSELECT Id, City, Photo FROM TableAAA WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -841,6 +841,7 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::MyHW.Properties.Settings.Default.DatabaseAAAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -849,7 +850,7 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, City, Photo FROM dbo.Photo";
+            this._commandCollection[0].CommandText = "SELECT Id, City, Photo FROM dbo.TableAAA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -857,7 +858,7 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DatabasePhotoDataSet.PhotoDataTable dataTable) {
+        public virtual int Fill(DatabaseAAADataSet.TableAAADataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -870,9 +871,9 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DatabasePhotoDataSet.PhotoDataTable GetData() {
+        public virtual DatabaseAAADataSet.TableAAADataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DatabasePhotoDataSet.PhotoDataTable dataTable = new DatabasePhotoDataSet.PhotoDataTable();
+            DatabaseAAADataSet.TableAAADataTable dataTable = new DatabaseAAADataSet.TableAAADataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -880,15 +881,15 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DatabasePhotoDataSet.PhotoDataTable dataTable) {
+        public virtual int Update(DatabaseAAADataSet.TableAAADataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DatabasePhotoDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Photo");
+        public virtual int Update(DatabaseAAADataSet dataSet) {
+            return this.Adapter.Update(dataSet, "TableAAA");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1033,7 +1034,7 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private PhotoTableAdapter _photoTableAdapter;
+        private TableAAATableAdapter _tableAAATableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1055,12 +1056,12 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public PhotoTableAdapter PhotoTableAdapter {
+        public TableAAATableAdapter TableAAATableAdapter {
             get {
-                return this._photoTableAdapter;
+                return this._tableAAATableAdapter;
             }
             set {
-                this._photoTableAdapter = value;
+                this._tableAAATableAdapter = value;
             }
         }
         
@@ -1083,9 +1084,9 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._photoTableAdapter != null) 
-                            && (this._photoTableAdapter.Connection != null))) {
-                    return this._photoTableAdapter.Connection;
+                if (((this._tableAAATableAdapter != null) 
+                            && (this._tableAAATableAdapter.Connection != null))) {
+                    return this._tableAAATableAdapter.Connection;
                 }
                 return null;
             }
@@ -1100,7 +1101,7 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._photoTableAdapter != null)) {
+                if ((this._tableAAATableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1112,14 +1113,14 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DatabasePhotoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DatabaseAAADataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._photoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Photo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tableAAATableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TableAAA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._photoTableAdapter.Update(updatedRows));
+                    result = (result + this._tableAAATableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1131,13 +1132,13 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DatabasePhotoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DatabaseAAADataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._photoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Photo.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tableAAATableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TableAAA.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._photoTableAdapter.Update(addedRows));
+                    result = (result + this._tableAAATableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1149,13 +1150,13 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DatabasePhotoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DatabaseAAADataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._photoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Photo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tableAAATableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TableAAA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._photoTableAdapter.Update(deletedRows));
+                    result = (result + this._tableAAATableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1191,15 +1192,15 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DatabasePhotoDataSet dataSet) {
+        public virtual int UpdateAll(DatabaseAAADataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._photoTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._photoTableAdapter.Connection) == false))) {
+            if (((this._tableAAATableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tableAAATableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("所有以 TableAdapterManager 管理的 TableAdapters 必須使用相同的連接字串。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -1233,13 +1234,13 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._photoTableAdapter != null)) {
-                    revertConnections.Add(this._photoTableAdapter, this._photoTableAdapter.Connection);
-                    this._photoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._photoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._photoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._photoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._photoTableAdapter.Adapter);
+                if ((this._tableAAATableAdapter != null)) {
+                    revertConnections.Add(this._tableAAATableAdapter, this._tableAAATableAdapter.Connection);
+                    this._tableAAATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tableAAATableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tableAAATableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tableAAATableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tableAAATableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1300,9 +1301,9 @@ namespace myAlbumn.DatabasePhotoDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._photoTableAdapter != null)) {
-                    this._photoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._photoTableAdapter]));
-                    this._photoTableAdapter.Transaction = null;
+                if ((this._tableAAATableAdapter != null)) {
+                    this._tableAAATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tableAAATableAdapter]));
+                    this._tableAAATableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

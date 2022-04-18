@@ -1,7 +1,7 @@
 ﻿
 namespace MyHW
 {
-    partial class FrmTool
+    partial class FormTool
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@ namespace MyHW
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTool));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTool));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label photoLabel;
-            this.photoDatabaseDataSet = new MyHW.PhotoDatabaseDataSet();
+            this.photobaseDataSet = new MyHW.PhotobaseDataSet();
             this.photoTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.photoTableTableAdapter = new MyHW.PhotoDatabaseDataSetTableAdapters.PhotoTableTableAdapter();
-            this.tableAdapterManager = new MyHW.PhotoDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.photoTableTableAdapter = new MyHW.PhotobaseDataSetTableAdapters.PhotoTableTableAdapter();
+            this.tableAdapterManager = new MyHW.PhotobaseDataSetTableAdapters.TableAdapterManager();
             this.photoTableBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -58,10 +58,12 @@ namespace MyHW
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.photoPictureBox = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             cityLabel = new System.Windows.Forms.Label();
             photoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.photoDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photobaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.photoTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.photoTableBindingNavigator)).BeginInit();
             this.photoTableBindingNavigator.SuspendLayout();
@@ -69,15 +71,15 @@ namespace MyHW
             ((System.ComponentModel.ISupportInitialize)(this.photoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // photoDatabaseDataSet
+            // photobaseDataSet
             // 
-            this.photoDatabaseDataSet.DataSetName = "PhotoDatabaseDataSet";
-            this.photoDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.photobaseDataSet.DataSetName = "PhotobaseDataSet";
+            this.photobaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // photoTableBindingSource
             // 
             this.photoTableBindingSource.DataMember = "PhotoTable";
-            this.photoTableBindingSource.DataSource = this.photoDatabaseDataSet;
+            this.photoTableBindingSource.DataSource = this.photobaseDataSet;
             // 
             // photoTableTableAdapter
             // 
@@ -87,7 +89,7 @@ namespace MyHW
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.PhotoTableTableAdapter = this.photoTableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = MyHW.PhotoDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = MyHW.PhotobaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // photoTableBindingNavigator
             // 
@@ -146,6 +148,7 @@ namespace MyHW
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -154,14 +157,14 @@ namespace MyHW
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 22);
             this.bindingNavigatorCountItem.Text = "/{0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目總數";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -169,7 +172,7 @@ namespace MyHW
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "移到下一個";
             // 
             // bindingNavigatorMoveLastItem
@@ -178,13 +181,13 @@ namespace MyHW
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "移到最後面";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -201,7 +204,7 @@ namespace MyHW
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "刪除";
             // 
             // photoTableBindingNavigatorSaveItem
@@ -209,7 +212,7 @@ namespace MyHW
             this.photoTableBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.photoTableBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("photoTableBindingNavigatorSaveItem.Image")));
             this.photoTableBindingNavigatorSaveItem.Name = "photoTableBindingNavigatorSaveItem";
-            this.photoTableBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.photoTableBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.photoTableBindingNavigatorSaveItem.Text = "儲存資料";
             this.photoTableBindingNavigatorSaveItem.Click += new System.EventHandler(this.photoTableBindingNavigatorSaveItem_Click);
             // 
@@ -222,10 +225,10 @@ namespace MyHW
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewImageColumn1});
             this.photoTableDataGridView.DataSource = this.photoTableBindingSource;
-            this.photoTableDataGridView.Location = new System.Drawing.Point(12, 28);
+            this.photoTableDataGridView.Location = new System.Drawing.Point(75, 94);
             this.photoTableDataGridView.Name = "photoTableDataGridView";
             this.photoTableDataGridView.RowTemplate.Height = 24;
-            this.photoTableDataGridView.Size = new System.Drawing.Size(343, 401);
+            this.photoTableDataGridView.Size = new System.Drawing.Size(300, 220);
             this.photoTableDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -249,7 +252,7 @@ namespace MyHW
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(407, 14);
+            idLabel.Location = new System.Drawing.Point(408, 30);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(18, 12);
             idLabel.TabIndex = 2;
@@ -258,15 +261,15 @@ namespace MyHW
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.photoTableBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(448, 11);
+            this.idTextBox.Location = new System.Drawing.Point(449, 27);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(340, 22);
+            this.idTextBox.Size = new System.Drawing.Size(315, 22);
             this.idTextBox.TabIndex = 3;
             // 
             // cityLabel
             // 
             cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(407, 42);
+            cityLabel.Location = new System.Drawing.Point(408, 58);
             cityLabel.Name = "cityLabel";
             cityLabel.Size = new System.Drawing.Size(28, 12);
             cityLabel.TabIndex = 4;
@@ -275,15 +278,15 @@ namespace MyHW
             // cityTextBox
             // 
             this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.photoTableBindingSource, "City", true));
-            this.cityTextBox.Location = new System.Drawing.Point(448, 39);
+            this.cityTextBox.Location = new System.Drawing.Point(449, 55);
             this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(340, 22);
+            this.cityTextBox.Size = new System.Drawing.Size(315, 22);
             this.cityTextBox.TabIndex = 5;
             // 
             // photoLabel
             // 
             photoLabel.AutoSize = true;
-            photoLabel.Location = new System.Drawing.Point(407, 67);
+            photoLabel.Location = new System.Drawing.Point(408, 83);
             photoLabel.Name = "photoLabel";
             photoLabel.Size = new System.Drawing.Size(35, 12);
             photoLabel.TabIndex = 6;
@@ -292,17 +295,32 @@ namespace MyHW
             // photoPictureBox
             // 
             this.photoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.photoTableBindingSource, "Photo", true));
-            this.photoPictureBox.Location = new System.Drawing.Point(448, 67);
+            this.photoPictureBox.Location = new System.Drawing.Point(449, 83);
             this.photoPictureBox.Name = "photoPictureBox";
-            this.photoPictureBox.Size = new System.Drawing.Size(340, 362);
+            this.photoPictureBox.Size = new System.Drawing.Size(315, 288);
             this.photoPictureBox.TabIndex = 7;
             this.photoPictureBox.TabStop = false;
             // 
-            // FrmTool
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(367, 403);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FormTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(cityLabel);
@@ -311,10 +329,10 @@ namespace MyHW
             this.Controls.Add(this.photoPictureBox);
             this.Controls.Add(this.photoTableDataGridView);
             this.Controls.Add(this.photoTableBindingNavigator);
-            this.Name = "FrmTool";
-            this.Text = "FrmTool";
-            this.Load += new System.EventHandler(this.FrmTool_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.photoDatabaseDataSet)).EndInit();
+            this.Name = "FormTool";
+            this.Text = "FormTool";
+            this.Load += new System.EventHandler(this.FormTool_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.photobaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.photoTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.photoTableBindingNavigator)).EndInit();
             this.photoTableBindingNavigator.ResumeLayout(false);
@@ -328,10 +346,10 @@ namespace MyHW
 
         #endregion
 
-        private PhotoDatabaseDataSet photoDatabaseDataSet;
+        private PhotobaseDataSet photobaseDataSet;
         private System.Windows.Forms.BindingSource photoTableBindingSource;
-        private PhotoDatabaseDataSetTableAdapters.PhotoTableTableAdapter photoTableTableAdapter;
-        private PhotoDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private PhotobaseDataSetTableAdapters.PhotoTableTableAdapter photoTableTableAdapter;
+        private PhotobaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator photoTableBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -352,5 +370,7 @@ namespace MyHW
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox cityTextBox;
         private System.Windows.Forms.PictureBox photoPictureBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button1;
     }
 }

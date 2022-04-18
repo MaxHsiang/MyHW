@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class FrmPhoto : Form
+    public partial class FormTool : Form
     {
-        public FrmPhoto()
+        public FormTool()
         {
             InitializeComponent();
         }
@@ -21,11 +21,25 @@ namespace MyHW
         {
             this.Validate();
             this.photoTableBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.photobaseDataSet);
+            try 
+            {
+                this.tableAdapterManager.UpdateAll(this.photobaseDataSet);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+
 
         }
 
+        private void FormTool_Load(object sender, EventArgs e)
+        {
+            // TODO: 這行程式碼會將資料載入 'photobaseDataSet.PhotoTable' 資料表。您可以視需要進行移動或移除。
+            this.photoTableTableAdapter.Fill(this.photobaseDataSet.PhotoTable);
 
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
